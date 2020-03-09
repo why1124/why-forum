@@ -18,12 +18,12 @@ class ArchTest {
 
         noClasses()
             .that()
-                .resideInAnyPackage("com.why.forum.service..")
+            .resideInAnyPackage("com.why.forum.service..")
             .or()
-                .resideInAnyPackage("com.why.forum.repository..")
+            .resideInAnyPackage("com.why.forum.repository..")
             .should().dependOnClassesThat()
-                .resideInAnyPackage("..com.why.forum.web..")
-        .because("Services and repositories should not depend on web layer")
-        .check(importedClasses);
+            .resideInAnyPackage("..com.why.forum.web..")
+            .because("Services and repositories should not depend on web layer")
+            .check(importedClasses);
     }
 }

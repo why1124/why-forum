@@ -1,4 +1,4 @@
-import { shallowMount, createLocalVue, Wrapper } from '@vue/test-utils';
+import { createLocalVue, shallowMount, Wrapper } from '@vue/test-utils';
 import JhiDocs from '@/admin/docs/docs.vue';
 import JhiDocsClass from '@/admin/docs/docs.component';
 

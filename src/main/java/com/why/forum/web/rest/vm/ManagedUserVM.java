@@ -1,6 +1,7 @@
 package com.why.forum.web.rest.vm;
 
 import com.why.forum.service.dto.UserDTO;
+
 import javax.validation.constraints.Size;
 
 /**

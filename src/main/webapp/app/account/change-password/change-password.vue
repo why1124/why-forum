@@ -7,7 +7,7 @@
                 <div class="alert alert-success" role="alert" v-if="success" v-html="$t('password.messages.success')">
                     <strong>Password changed!</strong>
                 </div>
-                <div class="alert alert-danger" role="alert" v-if="error"  v-html="$t('password.messages.error')">
+                <div class="alert alert-danger" role="alert" v-if="error" v-html="$t('password.messages.error')">
                     <strong>An error has occurred!</strong> The password could not be changed.
                 </div>
 

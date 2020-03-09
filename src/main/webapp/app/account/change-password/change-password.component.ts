@@ -2,7 +2,7 @@ import { maxLength, minLength, required } from 'vuelidate/lib/validators';
 import axios from 'axios';
 import { mapGetters } from 'vuex';
 import Component from 'vue-class-component';
-import { Vue, Inject } from 'vue-property-decorator';
+import { Vue } from 'vue-property-decorator';
 
 const validations = {
   resetPassword: {

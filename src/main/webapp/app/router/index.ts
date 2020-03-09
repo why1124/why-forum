@@ -1,12 +1,14 @@
 import Vue from 'vue';
 import Component from 'vue-class-component';
+import Router from 'vue-router';
+import { Authority } from '@/shared/security/authority';
+
 Component.registerHooks([
   'beforeRouteEnter',
   'beforeRouteLeave',
   'beforeRouteUpdate' // for vue-router 2.2+
 ]);
-import Router from 'vue-router';
-import { Authority } from '@/shared/security/authority';
+
 const Home = () => import('../core/home/home.vue');
 const Error = () => import('../core/error/error.vue');
 const Register = () => import('../account/register/register.vue');
@@ -42,13 +44,13 @@ export default new Router({
       path: '/forbidden',
       name: 'Forbidden',
       component: Error,
-      meta: { error403: true }
+      meta: {error403: true}
     },
     {
       path: '/not-found',
       name: 'NotFound',
       component: Error,
-      meta: { error404: true }
+      meta: {error404: true}
     },
     {
       path: '/register',
@@ -74,73 +76,73 @@ export default new Router({
       path: '/account/password',
       name: 'ChangePassword',
       component: ChangePassword,
-      meta: { authorities: [Authority.USER] }
+      meta: {authorities: [Authority.USER]}
     },
     {
       path: '/account/settings',
       name: 'Settings',
       component: Settings,
-      meta: { authorities: [Authority.USER] }
+      meta: {authorities: [Authority.USER]}
     },
     {
       path: '/admin/user-management',
       name: 'JhiUser',
       component: JhiUserManagementComponent,
-      meta: { authorities: [Authority.ADMIN] }
+      meta: {authorities: [Authority.ADMIN]}
     },
     {
       path: '/admin/user-management/new',
       name: 'JhiUserCreate',
       component: JhiUserManagementEditComponent,
-      meta: { authorities: [Authority.ADMIN] }
+      meta: {authorities: [Authority.ADMIN]}
     },
     {
       path: '/admin/user-management/:userId/edit',
       name: 'JhiUserEdit',
       component: JhiUserManagementEditComponent,
-      meta: { authorities: [Authority.ADMIN] }
+      meta: {authorities: [Authority.ADMIN]}
     },
     {
       path: '/admin/user-management/:userId/view',
       name: 'JhiUserView',
       component: JhiUserManagementViewComponent,
-      meta: { authorities: [Authority.ADMIN] }
+      meta: {authorities: [Authority.ADMIN]}
     },
     {
       path: '/admin/docs',
       name: 'JhiDocsComponent',
       component: JhiDocsComponent,
-      meta: { authorities: [Authority.ADMIN] }
+      meta: {authorities: [Authority.ADMIN]}
     },
     {
       path: '/admin/audits',
       name: 'JhiAuditsComponent',
       component: JhiAuditsComponent,
-      meta: { authorities: [Authority.ADMIN] }
+      meta: {authorities: [Authority.ADMIN]}
     },
     {
       path: '/admin/jhi-health',
       name: 'JhiHealthComponent',
       component: JhiHealthComponent,
-      meta: { authorities: [Authority.ADMIN] }
+      meta: {authorities: [Authority.ADMIN]}
     },
     {
       path: '/admin/logs',
       name: 'JhiLogsComponent',
       component: JhiLogsComponent,
-      meta: { authorities: [Authority.ADMIN] }
+      meta: {authorities: [Authority.ADMIN]}
     },
     {
       path: '/admin/jhi-metrics',
       name: 'JhiMetricsComponent',
       component: JhiMetricsComponent,
-      meta: { authorities: [Authority.ADMIN] }
+      meta: {authorities: [Authority.ADMIN]}
     },
     {
       path: '/admin/jhi-configuration',
       name: 'JhiConfigurationComponent',
       component: JhiConfigurationComponent,
-      meta: { authorities: [Authority.ADMIN] }
+      meta: {authorities: [Authority.ADMIN]}
     }
     // jhipster-needle-add-entity-to-router - JHipster will add entities to the router here
   ]

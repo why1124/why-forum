@@ -8,9 +8,7 @@ import com.why.forum.repository.UserRepository;
 import com.why.forum.security.AuthoritiesConstants;
 import com.why.forum.security.SecurityUtils;
 import com.why.forum.service.dto.UserDTO;
-
 import io.github.jhipster.security.RandomUtil;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.cache.CacheManager;
@@ -127,7 +125,7 @@ public class UserService {
 
     private boolean removeNonActivatedUser(User existingUser) {
         if (existingUser.getActivated()) {
-             return false;
+            return false;
         }
         userRepository.delete(existingUser);
         userRepository.flush();
@@ -290,6 +288,7 @@ public class UserService {
 
     /**
      * Gets a list of all the authorities.
+     *
      * @return a list of all the authorities.
      */
     public List<String> getAuthorities() {

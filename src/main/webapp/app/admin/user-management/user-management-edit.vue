@@ -106,7 +106,7 @@
                 <div>
                     <button type="button" class="btn btn-secondary" v-on:click="previousState()">
                         <font-awesome-icon icon="ban"></font-awesome-icon>&nbsp;<span
-                            v-text="$t('entity.action.cancel')">Cancel</span>
+                        v-text="$t('entity.action.cancel')">Cancel</span>
                     </button>
                     <button type="submit" :disabled="$v.userAccount.$invalid || isSaving" class="btn btn-primary">
                         <font-awesome-icon icon="save"></font-awesome-icon>&nbsp;<span v-text="$t('entity.action.save')">Save</span>

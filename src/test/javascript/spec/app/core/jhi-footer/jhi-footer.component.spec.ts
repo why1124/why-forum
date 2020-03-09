@@ -1,4 +1,4 @@
-import { shallowMount, createLocalVue, Wrapper } from '@vue/test-utils';
+import { createLocalVue, shallowMount, Wrapper } from '@vue/test-utils';
 import JhiFooter from '@/core/jhi-footer/jhi-footer.vue';
 import JhiFooterClass from '@/core/jhi-footer/jhi-footer.component';
 

@@ -1,8 +1,7 @@
 package com.why.forum.domain;
 
-import com.why.forum.config.Constants;
-
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.why.forum.config.Constants;
 import org.apache.commons.lang3.StringUtils;
 import org.hibernate.annotations.BatchSize;
 import org.hibernate.annotations.Cache;

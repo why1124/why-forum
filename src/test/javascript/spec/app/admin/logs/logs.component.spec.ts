@@ -1,4 +1,4 @@
-import { shallowMount, createLocalVue, Wrapper } from '@vue/test-utils';
+import { createLocalVue, shallowMount, Wrapper } from '@vue/test-utils';
 import axios from 'axios';
 import Logs from '@/admin/logs/logs.vue';
 import LogsClass from '@/admin/logs/logs.component';

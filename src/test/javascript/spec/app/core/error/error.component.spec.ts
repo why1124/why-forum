@@ -1,4 +1,4 @@
-import { createLocalVue, Wrapper, shallowMount } from '@vue/test-utils';
+import { createLocalVue, shallowMount, Wrapper } from '@vue/test-utils';
 import Error from '@/core/error/error.vue';
 import ErrorClass from '@/core/error/error.component';
 import * as config from '@/shared/config/config';

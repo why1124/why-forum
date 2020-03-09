@@ -1,4 +1,4 @@
-import { shallowMount, createLocalVue, Wrapper } from '@vue/test-utils';
+import { createLocalVue, shallowMount, Wrapper } from '@vue/test-utils';
 import * as config from '@/shared/config/config';
 import HealthModal from '@/admin/health/health-modal.vue';
 import HealthModalClass from '@/admin/health/health-modal.component';

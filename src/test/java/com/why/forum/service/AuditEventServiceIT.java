@@ -1,14 +1,15 @@
 package com.why.forum.service;
 
+import com.why.forum.ForumApp;
 import com.why.forum.domain.PersistentAuditEvent;
 import com.why.forum.repository.PersistenceAuditEventRepository;
-import com.why.forum.ForumApp;
 import io.github.jhipster.config.JHipsterProperties;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.transaction.annotation.Transactional;
+
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
 

@@ -2,9 +2,11 @@
     <div class="modal-body">
         <span class="badge badge-primary" v-on:click="threadDumpFilter = ''">All&nbsp;<span class="badge badge-pill badge-default">{{threadDumpData.threadDumpAll}}</span></span>&nbsp;
         <span class="badge badge-success" v-on:click="threadDumpFilter = 'RUNNABLE'">Runnable&nbsp;<span class="badge badge-pill badge-default">{{threadDumpData.threadDumpRunnable}}</span></span>&nbsp;
-        <span class="badge badge-info" v-on:click="threadDumpFilter = 'WAITING'">Waiting&nbsp;<span class="badge badge-pill badge-default">{{threadDumpData.threadDumpWaiting}}</span></span>&nbsp;
+        <span class="badge badge-info" v-on:click="threadDumpFilter = 'WAITING'">Waiting&nbsp;<span
+            class="badge badge-pill badge-default">{{threadDumpData.threadDumpWaiting}}</span></span>&nbsp;
         <span class="badge badge-warning" v-on:click="threadDumpFilter = 'TIMED_WAITING'">Timed Waiting&nbsp;<span class="badge badge-pill badge-default">{{threadDumpData.threadDumpTimedWaiting}}</span></span>&nbsp;
-        <span class="badge badge-danger" v-on:click="threadDumpFilter = 'BLOCKED'">Blocked&nbsp;<span class="badge badge-pill badge-default">{{threadDumpData.threadDumpBlocked}}</span></span>&nbsp;
+        <span class="badge badge-danger" v-on:click="threadDumpFilter = 'BLOCKED'">Blocked&nbsp;<span
+            class="badge badge-pill badge-default">{{threadDumpData.threadDumpBlocked}}</span></span>&nbsp;
         <div class="mt-2">&nbsp;</div>
         Filter
         <input type="text" v-model="threadDumpFilter" class="form-control">

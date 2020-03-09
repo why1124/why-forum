@@ -1,6 +1,6 @@
 import { email, maxLength, minLength, required } from 'vuelidate/lib/validators';
 import axios from 'axios';
-import { Vue, Component } from 'vue-property-decorator';
+import { Component, Vue } from 'vue-property-decorator';
 
 const validations = {
   resetAccount: {

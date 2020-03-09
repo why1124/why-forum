@@ -14,6 +14,7 @@ export default class JhiUserManagementView extends Vue {
       }
     });
   }
+
   public init(userId: number): void {
     this.userManagementService()
       .get(userId)

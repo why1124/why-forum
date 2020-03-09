@@ -56,7 +56,7 @@
                         <label class="form-control-label" for="email" v-text="$t('global.form[\'email.label\']')">Email</label>
                         <input type="email" class="form-control" id="email" name="email"
                                :class="{'valid': !$v.registerAccount.email.$invalid, 'invalid': $v.registerAccount.email.$invalid }"
-                               v-model="$v.registerAccount.email.$model" minlength=5 maxlength=254 email required  v-bind:placeholder="$t('global.form[\'email.placeholder\']')">
+                               v-model="$v.registerAccount.email.$model" minlength=5 maxlength=254 email required v-bind:placeholder="$t('global.form[\'email.placeholder\']')">
                         <div v-if="$v.registerAccount.email.$anyDirty && $v.registerAccount.email.$invalid">
                             <small class="form-text text-danger" v-if="!$v.registerAccount.email.required"
                                    v-text="$t('global.messages.validate.email.required')">
@@ -118,12 +118,15 @@
                         </div>
                     </div>
 
-                    <button type="submit" :disabled="$v.registerAccount.$invalid || $v.confirmPassword.$invalid" class="btn btn-primary" v-text="$t('register.form.button')">Register</button>
+                    <button type="submit" :disabled="$v.registerAccount.$invalid || $v.confirmPassword.$invalid" class="btn btn-primary" v-text="$t('register.form.button')">
+                        Register
+                    </button>
                 </form>
                 <p></p>
                 <div class="alert alert-warning">
                     <span v-text="$t('global.messages.info.authenticated.prefix')">If you want to </span>
-                    <a class="alert-link" v-on:click="openLogin()" v-text="$t('global.messages.info.authenticated.link')">sign in</a><span v-html="$t('global.messages.info.authenticated.suffix')">, you can try the default accounts:<br/>- Administrator (login="admin" and password="admin") <br/>- User (login="user" and password="user").</span>
+                    <a class="alert-link" v-on:click="openLogin()" v-text="$t('global.messages.info.authenticated.link')">sign in</a><span
+                    v-html="$t('global.messages.info.authenticated.suffix')">, you can try the default accounts:<br/>- Administrator (login="admin" and password="admin") <br/>- User (login="user" and password="user").</span>
                 </div>
             </div>
         </div>

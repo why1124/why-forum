@@ -1,7 +1,6 @@
 package com.why.forum.repository;
 
 import com.why.forum.domain.Authority;
-
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**

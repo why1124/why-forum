@@ -3,17 +3,15 @@ package com.why.forum.web.rest.errors;
 import com.why.forum.ForumApp;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
+import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.servlet.MockMvc;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 /**
  * Integration tests {@link ExceptionTranslator} controller advice.
@@ -36,13 +34,13 @@ public class ExceptionTranslatorIT {
 
     @Test
     public void testMethodArgumentNotValid() throws Exception {
-         mockMvc.perform(post("/api/exception-translator-test/method-argument").content("{}").contentType(MediaType.APPLICATION_JSON))
-             .andExpect(status().isBadRequest())
-             .andExpect(content().contentType(MediaType.APPLICATION_PROBLEM_JSON))
-             .andExpect(jsonPath("$.message").value(ErrorConstants.ERR_VALIDATION))
-             .andExpect(jsonPath("$.fieldErrors.[0].objectName").value("test"))
-             .andExpect(jsonPath("$.fieldErrors.[0].field").value("test"))
-             .andExpect(jsonPath("$.fieldErrors.[0].message").value("NotNull"));
+        mockMvc.perform(post("/api/exception-translator-test/method-argument").content("{}").contentType(MediaType.APPLICATION_JSON))
+            .andExpect(status().isBadRequest())
+            .andExpect(content().contentType(MediaType.APPLICATION_PROBLEM_JSON))
+            .andExpect(jsonPath("$.message").value(ErrorConstants.ERR_VALIDATION))
+            .andExpect(jsonPath("$.fieldErrors.[0].objectName").value("test"))
+            .andExpect(jsonPath("$.fieldErrors.[0].field").value("test"))
+            .andExpect(jsonPath("$.fieldErrors.[0].message").value("NotNull"));
     }
 
     @Test

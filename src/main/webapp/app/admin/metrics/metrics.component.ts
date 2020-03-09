@@ -1,7 +1,7 @@
 import numeral from 'numeral';
 import JhiMetricsModal from './metrics-modal.vue';
 import MetricsService from './metrics.service';
-import { Component, Vue, Inject } from 'vue-property-decorator';
+import { Component, Inject, Vue } from 'vue-property-decorator';
 
 @Component({
   components: {

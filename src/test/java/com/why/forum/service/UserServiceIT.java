@@ -5,9 +5,7 @@ import com.why.forum.config.Constants;
 import com.why.forum.domain.User;
 import com.why.forum.repository.UserRepository;
 import com.why.forum.service.dto.UserDTO;
-
 import io.github.jhipster.security.RandomUtil;
-
 import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -21,10 +19,10 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.Instant;
-import java.time.temporal.ChronoUnit;
 import java.time.LocalDateTime;
-import java.util.Optional;
+import java.time.temporal.ChronoUnit;
 import java.util.List;
+import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.when;

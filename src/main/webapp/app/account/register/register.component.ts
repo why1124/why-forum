@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import { Component, Inject } from 'vue-property-decorator';
-import { required, minLength, maxLength, helpers, email } from 'vuelidate/lib/validators';
+import { email, helpers, maxLength, minLength, required } from 'vuelidate/lib/validators';
 import LoginService from '@/account/login.service';
 import RegisterService from '@/account/register/register.service';
 import { EMAIL_ALREADY_USED_TYPE, LOGIN_ALREADY_USED_TYPE } from '@/constants';

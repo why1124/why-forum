@@ -1,8 +1,7 @@
 package com.why.forum.service;
 
-import com.why.forum.config.Constants;
-
 import com.why.forum.ForumApp;
+import com.why.forum.config.Constants;
 import com.why.forum.domain.User;
 import io.github.jhipster.config.JHipsterProperties;
 import org.junit.jupiter.api.BeforeEach;
@@ -33,7 +32,8 @@ import java.util.Properties;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import static org.assertj.core.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.fail;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 
@@ -234,7 +234,7 @@ public class MailServiceIT {
         String javaLangKey = langKey;
         Matcher matcher2 = PATTERN_LOCALE_2.matcher(langKey);
         if (matcher2.matches()) {
-            javaLangKey = matcher2.group(1) + "_"+ matcher2.group(2).toUpperCase();
+            javaLangKey = matcher2.group(1) + "_" + matcher2.group(2).toUpperCase();
         }
         Matcher matcher3 = PATTERN_LOCALE_3.matcher(langKey);
         if (matcher3.matches()) {

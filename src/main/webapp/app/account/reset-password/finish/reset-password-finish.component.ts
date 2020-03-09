@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { maxLength, minLength, required } from 'vuelidate/lib/validators';
-import { Inject, Vue, Component } from 'vue-property-decorator';
+import { Component, Inject, Vue } from 'vue-property-decorator';
 import LoginService from '@/account/login.service';
 
 const validations = {

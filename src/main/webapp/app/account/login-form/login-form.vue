@@ -13,11 +13,12 @@
                         </b-form-input>
                     </b-form-group>
                     <b-form-group v-bind:label="$t('login.form.password')" label-for="password">
-                        <b-form-input id="password" type="password" name="password" v-model.trim="name" v-bind:placeholder="$t('login.form[\'password.placeholder\']')" v-model="password">
+                        <b-form-input id="password" type="password" name="password" v-model.trim="name" v-bind:placeholder="$t('login.form[\'password.placeholder\']')"
+                                      v-model="password">
                         </b-form-input>
                     </b-form-group>
-                    <b-form-checkbox id="rememberMe" name="rememberMe" v-model="rememberMe" checked >
-                      <span v-text="$t('login.form.rememberme')">Remember me</span>
+                    <b-form-checkbox id="rememberMe" name="rememberMe" v-model="rememberMe" checked>
+                        <span v-text="$t('login.form.rememberme')">Remember me</span>
                     </b-form-checkbox>
                     <div>
                         <b-button type="submit" variant="primary" v-text="$t('login.form.button')">Sign in</b-button>
@@ -31,8 +32,8 @@
                 </div>
                 <div>
                     <b-alert show variant="warning">
-                      <span v-text="$t('global.messages.info.register.noaccount')">You don't have an account yet?</span>
-                      <b-link :to="'/register'" class="alert-link" v-text="$t('global.messages.info.register.link')">Register a new account</b-link>
+                        <span v-text="$t('global.messages.info.register.noaccount')">You don't have an account yet?</span>
+                        <b-link :to="'/register'" class="alert-link" v-text="$t('global.messages.info.register.link')">Register a new account</b-link>
                     </b-alert>
                 </div>
             </div>

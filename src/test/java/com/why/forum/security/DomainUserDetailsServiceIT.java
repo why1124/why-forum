@@ -3,7 +3,6 @@ package com.why.forum.security;
 import com.why.forum.ForumApp;
 import com.why.forum.domain.User;
 import com.why.forum.repository.UserRepository;
-
 import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
